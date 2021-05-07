@@ -5,7 +5,7 @@
     <LangVersion>preview</LangVersion>
     <NoWarn>CS0105</NoWarn>
     <NoWarn>NETSDK1048</NoWarn>
-	<CscToolPath>C:\Users\luquinta.REDMOND\Downloads\roslyn-features-compiler\roslyn-features-compiler\artifacts\bin\csc\Release\net472</CscToolPath>
+	<!-- <CscToolPath>C:\Users\luquinta.REDMOND\Downloads\roslyn-features-compiler\roslyn-features-compiler\artifacts\bin\csc\Release\net472</CscToolPath> -->
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,8 +13,15 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>  
-    <PackageReference Include="Microsoft.Extensions.ML" Version="1.5.5" />
+    <!-- <PackageReference Include="Microsoft.Extensions.ML" Version="1.5.5" /> -->
     <PackageReference Include="Microsoft.ML" Version="1.5.5" />
+    <PackageReference Include="Microsoft.ML.TimeSeries" Version="1.5.5" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Update="WeatherForecastModel.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>  
 
 </Project>
